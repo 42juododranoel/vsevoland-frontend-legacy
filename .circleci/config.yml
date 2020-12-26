@@ -71,6 +71,7 @@ jobs:
           command: |
             export D_RELEASE=0.5.1
             wget -O - https://raw.githubusercontent.com/f213/d/master/install.sh|sh
+
       - run:
           name: Update image
           command: |
