@@ -3,19 +3,26 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "export": "nuxt export",
-    "serve": "nuxt serve",
-    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint": "npm run lint:js",
-    "test": "jest"
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server nuxt.config.js",
+    "build": "cross-env NODE_ENV=production nuxt build",
+    "start": "cross-env NODE_ENV=production HOST=0.0.0.0 PORT=3000 node server/index.js",
+    "generate": "nuxt generate",
+    "lint": "cross-env NODE_ENV=production eslint --ext .js,.vue --ignore-path .gitignore . && stylelint --ignore-path .gitignore **/*.{vue,css}",
+    "lint:fix": "cross-env NODE_ENV=production eslint --ext .js,.vue --ignore-path .gitignore --fix . && stylelint --ignore-path .gitignore **/*.{vue,css} --fix",
+    "test": "jest -w 1",
+    "e2e": "cypress run --env host=http://localhost:3000",
+    "e2e:mobile": "cypress run --env host=http://localhost:3000 userAgent=mobile",
+    "e2e:open": "cypress open",
+    "storybook": "start-storybook -p 6006 --ci",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "morgan": "^1.10.0",
     "nuxt": "^2.13.0"
   },
   "devDependencies": {
@@ -30,6 +37,7 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.0.1",
+    "nodemon": "^2.0.6",
     "prettier": "^2.0.5",
     "vue-jest": "^3.0.4"
   }

@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
@@ -66,4 +66,5 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  telemetry: false,
 }
