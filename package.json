@@ -7,14 +7,9 @@
     "build": "cross-env NODE_ENV=production nuxt build",
     "start": "cross-env NODE_ENV=production HOST=0.0.0.0 PORT=3000 node server/index.js",
     "generate": "nuxt generate",
-    "lint": "cross-env NODE_ENV=production eslint --ext .js,.vue --ignore-path .gitignore . && stylelint --ignore-path .gitignore **/*.{vue,css}",
-    "lint:fix": "cross-env NODE_ENV=production eslint --ext .js,.vue --ignore-path .gitignore --fix . && stylelint --ignore-path .gitignore **/*.{vue,css} --fix",
-    "test": "jest -w 1",
-    "e2e": "cypress run --env host=http://localhost:3000",
-    "e2e:mobile": "cypress run --env host=http://localhost:3000 userAgent=mobile",
-    "e2e:open": "cypress open",
-    "storybook": "start-storybook -p 6006 --ci",
-    "build-storybook": "build-storybook"
+    "lint": "cross-env NODE_ENV=production eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:fix": "cross-env NODE_ENV=production eslint --ext .js,.vue --ignore-path .gitignore --fix .",
+    "test": "jest -w 1"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
@@ -39,6 +34,9 @@
     "jest": "^26.0.1",
     "nodemon": "^2.0.6",
     "prettier": "^2.0.5",
+    "stylelint": "^13.8.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-declaration-use-variable": "^1.7.2",
     "vue-jest": "^3.0.4"
   }
 }
