@@ -1,0 +1,153 @@
+// Viewport and field variables.
+// Inspired by Bureau Gorbunov https://bureau.ru/soviet/20190221/
+
+$default-field-width: 6vw;
+$grid-columns-count: 16;
+$grid-columns-shortcut: repeat($grid-columns-count, 1fr);
+
+$sm-width: 0px;
+$sm-field-width: 20px;
+
+$md-width: 960px;
+$md-centered-width: 1250px;
+$md-max-content-width: 1100px;
+$md-field-width: calc((100vw - #{$md-max-content-width}) / 2);
+
+$lg-width: 1400px;
+$lg-centered-width: 1590px;
+$lg-max-content-width: 1400px;
+$lg-field-width: calc((100vw - #{$lg-max-content-width}) / 2);
+
+$viewport-widths: (
+  sm: $sm-width,
+  md: $md-width,
+  lg: $lg-width,
+);
+$viewports: sm, md, lg;
+
+.row {
+	display: grid;
+	grid-column-gap: var(--font-size);
+}
+
+.fielded-row {
+  display: grid;
+}
+
+// 0 to md
+@include media-breakpoint-between($sm-width, $md-width) {
+  .row {
+    grid-template-columns: $grid-columns-shortcut
+  }
+  .fielded-row {
+    grid-template-columns: $sm-field-width $grid-columns-shortcut $sm-field-width
+  }
+  .container {
+    margin-left: $sm-field-width;
+    margin-right: $sm-field-width;
+  }
+  .splash {
+    padding-left: $sm-field-width;
+    padding-right: $sm-field-width;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// md to md-centered
+@include media-breakpoint-between($md-width, $md-centered-width) {
+  .row {
+    grid-template-columns: $grid-columns-shortcut
+  }
+  .fielded-row {
+    grid-template-columns: $default-field-width $grid-columns-shortcut $default-field-width
+  }
+  .container {
+    margin-left: $default-field-width;
+    margin-right: $default-field-width;
+  }
+  .splash {
+    padding-left: $default-field-width;
+    padding-right: $default-field-width;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// md-centered to lg
+@include media-breakpoint-between($md-centered-width, $lg-width) {
+  .row {
+    grid-template-columns: $grid-columns-shortcut
+  }
+  .fielded-row {
+    grid-template-columns: $md-field-width $grid-columns-shortcut $md-field-width
+  }
+  .container {
+    margin-left: $md-field-width;
+    margin-right: $md-field-width;
+  }
+  .splash {
+    padding-left: $md-field-width;
+    padding-right: $md-field-width;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// lg to lg-centered
+@include media-breakpoint-between($lg-width, $lg-centered-width) {
+  .row {
+    grid-template-columns: $grid-columns-shortcut
+  }
+  .fielded-row {
+    grid-template-columns: $default-field-width $grid-columns-shortcut $default-field-width
+  }
+  .container {
+    margin-left: $default-field-width;
+    margin-right: $default-field-width;
+  }
+  .splash {
+    padding-left: $default-field-width;
+    padding-right: $default-field-width;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// lg-centered to ∞
+@include media-breakpoint-up($lg-centered-width) {
+  .row {
+    grid-template-columns: $grid-columns-shortcut
+  }
+  .fielded-row {
+    grid-template-columns: $lg-field-width $grid-columns-shortcut $lg-field-width
+  }
+  .container {
+    margin-left: $lg-field-width;
+    margin-right: $lg-field-width;
+  }
+  .splash {
+    padding-left: $lg-field-width;
+    padding-right: $lg-field-width;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@include media-breakpoint-between($sm-width, $md-width) {
+  [class^='col-'],
+  [class^='off-'] { grid-column: 1 / -1 }
+}
+
+@each $viewport, $width in $viewport-widths {
+  $infix: get-breakpoint-infix($viewport);
+
+  @include media-breakpoint-up($width) {
+    .col#{$infix} { grid-column: 1 / -1 }
+
+    @for $span from 1 through $grid-columns-count {
+      .off-#{$span}#{$infix} { grid-column-start: $span + 1 }
+      .col-#{$span}#{$infix} { grid-column-end: span $span }
+    }
+  }
+}

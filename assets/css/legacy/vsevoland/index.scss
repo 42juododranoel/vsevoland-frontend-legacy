@@ -1,0 +1,65 @@
+.container {
+  margin-top: var(--one-line);
+  margin-bottom: var(--one-line);
+}
+
+.light-mart-item {
+  align-self: end;
+}
+
+.mart-line {
+  align-items: center;
+}
+.mart-line .h3-wrapper {
+  margin-top: 0;
+}
+
+.mart-text .h2-wrapper {
+  margin-top: 0;
+  margin-bottom: var(--one-line);
+}
+
+.small-mart-heading,
+.medium-mart-heading {
+  font-size: calc(1.5 * var(--font-size));
+  line-height: calc(1.5 * var(--font-size) + var(--grid-cell));
+  margin-top: -17px;
+  margin-bottom: -9px;
+}
+
+@media (min-width: 960px) {
+  .small-mart-heading {
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    margin-top: -11px;
+    margin-bottom: -7px;
+  }
+}
+
+@media (min-width: 0px) {
+  .h2-wrapper,
+  .h3-wrapper {
+    margin-top: var(--interline);
+    margin-bottom: var(--one-line);
+  }
+}
+@media (min-width: 960px) {
+  .h2-wrapper,
+  .h3-wrapper {
+    margin-top: var(--interline);
+    margin-bottom: var(--interline);
+  }
+  .mart { margin-bottom: var(--two-lines) }
+}
+
+#gradient {
+  width: 100%;
+  height: 75vh;
+  transition: transform 0.4s;
+  background-blend-mode:difference;
+  background-image:radial-gradient(at 37% 72%,#db279c, #000c5b), radial-gradient(at 94% 28%,#8ef7ff, #2033b2), radial-gradient(at 16% 67%,#465adb, #7484ed), radial-gradient(at 35% 8%,#547703, #d10485);
+}
+
+a:hover #gradient {
+  transform: scale(1.025);
+}

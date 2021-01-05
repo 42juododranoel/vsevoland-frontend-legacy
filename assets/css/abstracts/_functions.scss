@@ -1,0 +1,17 @@
+@function get-breakpoint-infix($viewport) {
+  @return if($viewport == sm, '', '-#{$viewport}');
+}
+
+
+@mixin media-breakpoint-between($min, $max) {
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+
+@mixin media-breakpoint-up($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}

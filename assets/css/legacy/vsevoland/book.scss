@@ -1,0 +1,29 @@
+* {
+  hyphens: none;
+}
+
+.smallcapitals {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 90%;
+
+  .space {
+    letter-spacing: normal;
+  }
+}
+
+.text-indent {
+  text-indent: 27px;
+}
+
+.talking {
+  margin-left: 27px;
+
+  p {
+    text-indent: -27px;
+  }
+}
+
+.hanging-letter {
+  margin-left: -11px;
+}

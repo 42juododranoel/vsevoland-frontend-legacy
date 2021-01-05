@@ -1,0 +1,156 @@
+// Viewport and field variables
+
+$width-sm: 0px;
+
+$width-md: 960px;
+$width-centered-md: 1250px;
+
+$width-lg: 1400px;
+$width-centered-lg: 1590px;
+
+$viewport-widths: (
+  sm: $width-sm,
+  md: $width-md,
+  lg: $width-lg,
+);
+$viewports: sm, md, lg;
+
+$content-max-width-md: 1100px;
+$content-max-width-lg: 1400px;
+
+$field-size-default: 6vw;
+$field-size-sm: 20px;
+$field-size-md: calc((100vw - #{$content-max-width-md}) / 2);
+$field-size-lg: calc((100vw - #{$content-max-width-lg}) / 2);
+
+$grid-columns-count: 16;
+$repeat-grid-columns: repeat($grid-columns-count, 1fr);
+
+
+// Dynamic fields. I <3 Bureau https://bureau.ru/soviet/20190221/
+
+.row {
+	display: grid;
+	grid-column-gap: var(--font-size);
+}
+.fielded-row {
+  display: grid;
+}
+
+// Bureau uses 960px
+@include media-breakpoint-down($width-md - 1px) {
+  .row {
+    grid-template-columns: $repeat-grid-columns
+  }
+  .fielded-row {
+    grid-template-columns: $field-size-sm $repeat-grid-columns $field-size-sm
+  }
+  .container {
+    margin-left: $field-size-sm;
+    margin-right: $field-size-sm;
+  }
+  .splash {
+    padding-left: $field-size-sm;
+    padding-right: $field-size-sm;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// Bureau uses 961px. I've changed it to 960 to fit breakpoint `md`
+@include media-breakpoint-between($width-md, $width-centered-md) {
+  .row {
+    grid-template-columns: $repeat-grid-columns
+  }
+  .fielded-row {
+    grid-template-columns: $field-size-default $repeat-grid-columns $field-size-default
+  }
+  .container {
+    margin-left: $field-size-default;
+    margin-right: $field-size-default;
+  }
+  .splash {
+    padding-left: $field-size-default;
+    padding-right: $field-size-default;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@include media-breakpoint-between($width-centered-md + 1px, $width-lg - 1px) {
+  .row {
+    grid-template-columns: $repeat-grid-columns
+  }
+  .fielded-row {
+    grid-template-columns: $field-size-md $repeat-grid-columns $field-size-md
+  }
+  .container {
+    margin-left: $field-size-md;
+    margin-right: $field-size-md;
+  }
+  .splash {
+    padding-left: $field-size-md;
+    padding-right: $field-size-md;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@include media-breakpoint-between($width-lg, $width-centered-lg) {
+  .row {
+    grid-template-columns: $repeat-grid-columns
+  }
+  .fielded-row {
+    grid-template-columns: $field-size-default $repeat-grid-columns $field-size-default
+  }
+  .container {
+    margin-left: $field-size-default;
+    margin-right: $field-size-default;
+  }
+  .splash {
+    padding-left: $field-size-default;
+    padding-right: $field-size-default;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@include media-breakpoint-up($width-centered-lg + 1px) {
+  .row {
+    grid-template-columns: $repeat-grid-columns
+  }
+  .fielded-row {
+    grid-template-columns: $field-size-lg $repeat-grid-columns $field-size-lg
+  }
+  .container {
+    margin-left: $field-size-lg;
+    margin-right: $field-size-lg;
+  }
+  .splash {
+    padding-left: $field-size-lg;
+    padding-right: $field-size-lg;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+// Bootstrap stuff
+
+@include media-breakpoint-sm {
+  [class^='col-'],
+  [class^='off-'] { grid-column: 1 / -1 }
+}
+
+@each $viewport, $width in $viewport-widths {
+  $infix: get-breakpoint-infix($viewport);
+
+  @include media-breakpoint-up($width) {
+    .col#{$infix} { grid-column: 1 / -1 }
+
+    @for $span from 1 through $grid-columns-count {
+      .off-#{$span}#{$infix} { grid-column-start: $span + 1 }
+      .col-#{$span}#{$infix} { grid-column-end: span $span }
+    }
+  }
+}
