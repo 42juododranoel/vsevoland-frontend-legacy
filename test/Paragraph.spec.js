@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import Logo from '@/components/Logo.vue'
+import Paragraph from '@/components/Paragraph.vue'
 
-describe('Logo', () => {
+describe('Paragraph', () => {
   test('is a Vue instance', () => {
-    const wrapper = mount(Logo)
+    const wrapper = mount(Paragraph)
     expect(wrapper.vm).toBeTruthy()
   })
 })
