@@ -9,7 +9,7 @@
     "generate": "nuxt generate",
     "lint": "cross-env NODE_ENV=production eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:fix": "cross-env NODE_ENV=production eslint --ext .js,.vue --ignore-path .gitignore --fix .",
-    "test": "jest -w 1"
+    "test": ""
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
