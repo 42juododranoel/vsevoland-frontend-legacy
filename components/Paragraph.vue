@@ -1,6 +1,6 @@
 <template>
   <div class="p-wrapper">
-    <p>{{ value }}</p>
+    <p :class="{ 'no-indent': noIndent }">{{ value }}</p>
   </div>
 </template>
 
@@ -11,6 +11,10 @@ export default {
     inner: {
       type: String,
       default: '',
+    },
+    noIndent: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
@@ -32,5 +36,9 @@ p {
 
 .p-wrapper {
   margin-bottom: $p-wrapper-margin-bottom;
+}
+
+.no-indent {
+  text-indent: unset !important;
 }
 </style>

@@ -11,28 +11,24 @@ $font-family-display: 'PT Sans Caption', sans-serif;
 $font-size: 18px;  // By hand
 $line-height: 27px;  // By hand
 
-$interline: 11px;  // By making white lines equal in neighbor paragraph
-$one-line: 33px;  // By measuring in Krita
-$two-lines: 60px;  // By measuring in Krita
-
 $p-font-size: $font-size;
 $p-line-height: $line-height;
 $p-margin-top: -11px;  // By measuring outer wrapper padding
 $p-margin-bottom: -6px;  // By measuring outer wrapper padding
-$p-wrapper-margin-bottom: $interline;
+$p-wrapper-margin-bottom: 11px;  // By making white lines equal in neighbor paragraph
 $p-text-indent: 27px;  // By hand
 
 $h1-font-size: 3 * $p-font-size;
 $h1-line-height: 81px;
 $h1-margin-top: -30px;  // By measuring outer wrapper padding
 $h1-margin-bottom: -20px;  // By measuring outer wrapper padding
-$h1-wrapper-margin-bottom: $two-lines;  // By aligning left and right lines
+$h1-wrapper-margin-bottom: 60px;  // By aligning left and right lines and measuring in Krita
 
 $h2-font-size: 2 * $p-font-size;
 $h2-line-height: $h2-font-size + ($h2-font-size / 2);
 $h2-margin-top: -20px;  // By measuring outer wrapper padding
 $h2-margin-bottom: -10px;  // By measuring outer wrapper padding
-$h2-wrapper-margin-bottom: $one-line;  // By aligning left and right lines
+$h2-wrapper-margin-bottom: 33px;  // By aligning left and right lines and measuring in Krita
 
 $h3-font-size: $p-font-size;
 $h3-line-height: $p-line-height;

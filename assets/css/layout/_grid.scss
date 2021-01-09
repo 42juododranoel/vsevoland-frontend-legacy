@@ -30,7 +30,7 @@ $viewports: sm, md, lg;
 	grid-column-gap: var(--font-size);
 }
 
-.fielded-row {
+.row-fielded {
   display: grid;
 }
 
@@ -39,14 +39,14 @@ $viewports: sm, md, lg;
   .row {
     grid-template-columns: $grid-columns-shortcut
   }
-  .fielded-row {
+  .row-fielded {
     grid-template-columns: $sm-field-width $grid-columns-shortcut $sm-field-width
   }
   .container {
     margin-left: $sm-field-width;
     margin-right: $sm-field-width;
   }
-  .splash {
+  .container-backgroundable {
     padding-left: $sm-field-width;
     padding-right: $sm-field-width;
     margin-left: 0;
@@ -59,14 +59,14 @@ $viewports: sm, md, lg;
   .row {
     grid-template-columns: $grid-columns-shortcut
   }
-  .fielded-row {
+  .row-fielded {
     grid-template-columns: $default-field-width $grid-columns-shortcut $default-field-width
   }
   .container {
     margin-left: $default-field-width;
     margin-right: $default-field-width;
   }
-  .splash {
+  .container-backgroundable {
     padding-left: $default-field-width;
     padding-right: $default-field-width;
     margin-left: 0;
@@ -79,14 +79,14 @@ $viewports: sm, md, lg;
   .row {
     grid-template-columns: $grid-columns-shortcut
   }
-  .fielded-row {
+  .row-fielded {
     grid-template-columns: $md-field-width $grid-columns-shortcut $md-field-width
   }
   .container {
     margin-left: $md-field-width;
     margin-right: $md-field-width;
   }
-  .splash {
+  .container-backgroundable {
     padding-left: $md-field-width;
     padding-right: $md-field-width;
     margin-left: 0;
@@ -99,14 +99,14 @@ $viewports: sm, md, lg;
   .row {
     grid-template-columns: $grid-columns-shortcut
   }
-  .fielded-row {
+  .row-fielded {
     grid-template-columns: $default-field-width $grid-columns-shortcut $default-field-width
   }
   .container {
     margin-left: $default-field-width;
     margin-right: $default-field-width;
   }
-  .splash {
+  .container-backgroundable {
     padding-left: $default-field-width;
     padding-right: $default-field-width;
     margin-left: 0;
@@ -119,14 +119,14 @@ $viewports: sm, md, lg;
   .row {
     grid-template-columns: $grid-columns-shortcut
   }
-  .fielded-row {
+  .row-fielded {
     grid-template-columns: $lg-field-width $grid-columns-shortcut $lg-field-width
   }
   .container {
     margin-left: $lg-field-width;
     margin-right: $lg-field-width;
   }
-  .splash {
+  .container-backgroundable {
     padding-left: $lg-field-width;
     padding-right: $lg-field-width;
     margin-left: 0;
