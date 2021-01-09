@@ -13,6 +13,11 @@ export default {
       default: '',
     },
   },
+  computed: {
+    value() {
+      return this.$typograph(this.inner)
+    },
+  },
 }
 </script>
 

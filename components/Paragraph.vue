@@ -5,9 +5,6 @@
 </template>
 
 <script>
-const Typograf = require('typograf')
-const typograf = new Typograf({ locale: ['ru', 'en-US'] })
-
 export default {
   name: 'Paragraph',
   props: {
@@ -18,7 +15,7 @@ export default {
   },
   computed: {
     value() {
-      return typograf.execute(this.inner)
+      return this.$typograph(this.inner)
     },
   },
 }
