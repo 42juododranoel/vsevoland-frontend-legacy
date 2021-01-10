@@ -14,19 +14,21 @@ export default {
 @import 'assets/css/abstracts/_variables.scss';
 @import 'assets/css/abstracts/_mixins.scss';
 
+.spread {
+  display: grid;
+  grid-template-rows: minmax(100vh, min-content);
+  border-bottom: 1px solid #bebebe;
+}
+
 @include media-breakpoint-between($width-sm, $width-md) {
   .spread {
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
   }
 }
 
 @include media-breakpoint-up($width-md) {
   .spread {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
   }
 }
 </style>
