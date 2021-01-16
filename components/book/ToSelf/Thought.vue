@@ -2,7 +2,7 @@
   <div>
     <Heading3 :inner="title" />
     <Paragraph :inner="text" no-indent="true" />
-    <Spacer size="one-line" />
+    <Spacer size="1" />
   </div>
 </template>
 

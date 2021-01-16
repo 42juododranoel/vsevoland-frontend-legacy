@@ -13,7 +13,7 @@ export default {
   },
   computed: {
     className() {
-      return this.size + '-below'
+      return 'spacer-' + this.size
     },
   },
 }
@@ -22,20 +22,16 @@ export default {
 <style lang="scss">
 @import 'assets/css/abstracts/_variables.scss';
 
-.interline-below {
-  margin-bottom: $interline !important;
+.spacer-1 {
+  margin-bottom: $one-line;
 }
-.big-interline-below {
-  margin-bottom: $big-interline !important;
+.spacer-15 {
+  margin-bottom: $one-and-half-lines;
 }
-
-.one-line-below {
-  margin-bottom: $one-line !important;
+.spacer-2 {
+  margin-bottom: $two-lines;
 }
-.two-lines-below {
-  margin-bottom: $two-lines !important;
-}
-.three-lines-below {
-  margin-bottom: $three-lines !important;
+.spacer-3 {
+  margin-bottom: $three-lines;
 }
 </style>

@@ -25,7 +25,7 @@ export default {
 
 .display-screen {
   background-color: red;
-  height: 75vh;
+  height: 80vh;
   margin-bottom: 18px;
 }
 </style>

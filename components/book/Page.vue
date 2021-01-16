@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div :id="id" class="page">
     <slot />
   </div>
 </template>
@@ -7,6 +7,12 @@
 <script>
 export default {
   name: 'Page',
+  props: {
+    id: {
+      type: String,
+      default: '',
+    },
+  },
 }
 </script>
 
