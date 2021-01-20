@@ -26,18 +26,14 @@ export default {
 
     &:first-of-type {
       grid-row: 1;
-      padding-top: $page-first-top-padding-sm;
-      padding-bottom: $page-first-bottom-padding-sm;
-      padding-left: $page-outer-padding-sm;
+      padding-left: $spread-outer-size-sm;
       padding-right: $page-inner-padding-sm;
     }
 
     &:last-of-type {
       grid-row: 2;
-      padding-top: $page-last-top-padding-sm;
-      padding-bottom: $page-last-bottom-padding-sm;
       padding-left: $page-inner-padding-sm;
-      padding-right: $page-outer-padding-sm;
+      padding-right: $spread-outer-size-sm;
     }
   }
 }
@@ -46,19 +42,16 @@ export default {
   .page {
     grid-row: 1;
 
-    padding-top: $page-top-padding-md;
-    padding-bottom: $page-bottom-padding-md;
-
     &:first-of-type {
       grid-column: 1;
-      padding-left: $page-outer-padding-md;
+      padding-left: $spread-outer-size-md;
       padding-right: $page-inner-padding-md;
     }
 
     &:last-of-type {
       grid-column: 2;
       padding-left: $page-inner-padding-md;
-      padding-right: $page-outer-padding-md;
+      padding-right: $spread-outer-size-md;
     }
   }
 }

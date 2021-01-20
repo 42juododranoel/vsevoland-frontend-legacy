@@ -48,17 +48,14 @@ $two-lines:    2 * $one-line;
 $three-lines:  3 * $one-line;
 
 // Inspired by Bureau Gorbunov https://bureau.rocks/books/ui-en/demo/
-$page-first-top-padding-sm: 40px;
-$page-last-top-padding-sm: 20px;
-$page-first-bottom-padding-sm: $page-last-top-padding-sm;
-$page-last-bottom-padding-sm: $page-first-top-padding-sm;
-$page-inner-padding-sm: calc(100vw / 2 / 9 * 0.75);
-$page-outer-padding-sm: $page-inner-padding-sm;
+// And Jan Tschichold's “The Form of the Book”.
 
-// From Jan Tschichold's “The Form of the Book”,
-// adjusted to better fit on screen.
-// Inspired by Bureau Gorbunov https://bureau.rocks/books/ui-en/demo/
-$page-top-padding-md: calc(100vh / 9 / 2 * 1.5);
-$page-bottom-padding-md: calc(100vh / 9 / 2 * 1.5 * 2);
+$spread-header-size-sm: calc(100vh / 9 / 2);
+$spread-header-size-md: calc(100vh / 9 / 2 * 1.5);
+$spread-footer-size-sm: calc(100vh / 9 / 2);
+$spread-footer-size-md: calc(100vh / 9 / 2 * 1.5 * 2);
+$spread-outer-size-sm: calc(100vw / 2 / 9 * 0.75);
+$spread-outer-size-md: calc(100vw / 2 / 9 * 1.5);
+
+$page-inner-padding-sm: calc(100vw / 2 / 9 * 0.75);
 $page-inner-padding-md: calc(100vw / 2 / 9 * 0.75);
-$page-outer-padding-md: calc(100vw / 2 / 9 * 1.5);

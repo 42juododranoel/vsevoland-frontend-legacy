@@ -1,6 +1,6 @@
 <template>
   <div id="to-self">
-    <Spread>
+    <Spread number="3">
       <Page>
         <Thought
           title="For the love of it"
@@ -39,7 +39,7 @@
         />
       </Page>
     </Spread>
-    <Spread>
+    <Spread number="4">
       <Page>
         <Thought
           title="Фу позор"
@@ -73,7 +73,7 @@
         />
       </Page>
     </Spread>
-    <Spread>
+    <Spread number="5">
       <Page>
         <Thought
           title="Стоики о болезнях"
@@ -106,7 +106,7 @@
         />
       </Page>
     </Spread>
-    <Spread>
+    <Spread number="6">
       <Page>
         <Thought
           title="С миру по нитке"
@@ -121,11 +121,11 @@
 
         <Thought
           title="Now you see me"
-          text="Одна из главных мудростей: всё решает восприятие. Если ты назовёшь себя художником и убедишь в этом окружающих, какая разница, умеешь ли ты рисовать?"
+          text="Одна из главных мудростей: всё решает восприятие. Если ты назовёшь себя художником и убедишь в этом окружающих, то какая разница, что ты не умеешь рисовать?"
         />
       </Page>
     </Spread>
-    <Spread>
+    <Spread number="7">
       <Page>
         <Thought
           title="The one thing I’ve always had is good luck"
@@ -149,7 +149,7 @@
         />
       </Page>
     </Spread>
-    <Spread>
+    <Spread number="8">
       <Page>
         <Thought
           title="Не такой как все"
@@ -183,7 +183,7 @@
         />
       </Page>
     </Spread>
-    <Spread>
+    <Spread number="9">
       <Page>
         <Thought
           title="Навязчивый буддизм"
@@ -222,7 +222,7 @@
         />
       </Page>
     </Spread>
-    <Spread>
+    <Spread number="10">
       <Page>
         <Thought
           title="Me, myself and I"
@@ -256,7 +256,7 @@
         />
       </Page>
     </Spread>
-    <Spread>
+    <Spread number="11">
       <Page>
         <Thought
           title="Страна советов"
@@ -290,7 +290,7 @@
         />
       </Page>
     </Spread>
-    <Spread>
+    <Spread number="12">
       <Page>
         <Thought
           title="Die fröhliche Wissenschaft"
@@ -328,7 +328,7 @@
         />
       </Page>
     </Spread>
-    <Spread>
+    <Spread number="13">
       <Page>
         <Thought
           title="Ok, boomer"
@@ -377,7 +377,7 @@
         />
       </Page>
     </Spread>
-    <Spread>
+    <Spread number="14">
       <Page>
         <Thought
           title="Клиентский сервис"
@@ -411,7 +411,7 @@
         />
       </Page>
     </Spread>
-    <Spread>
+    <Spread number="15">
       <Page>
         <Thought
           title="Кому-то так проще"
@@ -476,3 +476,14 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+@import 'assets/css/abstracts/_variables.scss';
+@import 'assets/css/abstracts/_mixins.scss';
+
+@include media-breakpoint-up($width-md) {
+  .page {
+    margin-bottom: -$one-line;
+  }
+}
+</style>
