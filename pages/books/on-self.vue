@@ -1,5 +1,33 @@
 <template>
   <div id="to-self">
+    <Spread number="" content="splash">
+      <picture>
+        <source
+          media="(orientation:portrait)"
+          srcset="
+            https://vsevoland-spaces.fra1.cdn.digitaloceanspaces.com/on-self/on-self.png
+          "
+        />
+        <source
+          media="(orientation:landscape)"
+          srcset="
+            https://vsevoland-spaces.fra1.cdn.digitaloceanspaces.com/on-self/on-self-landscape.png
+          "
+        />
+        <img
+          src="https://vsevoland-spaces.fra1.cdn.digitaloceanspaces.com/on-self/on-self.png"
+        />
+      </picture>
+    </Spread>
+
+    <Spread number="2">
+      <Page>
+        <Heading2 inner="Вступление" />
+        <Paragraph no-indent="true" inner="…" />
+      </Page>
+      <Page> </Page>
+    </Spread>
+
     <Spread number="3">
       <Page>
         <Thought
@@ -463,13 +491,13 @@ export default {
   },
   head() {
     return {
-      title: 'К себе, или Размышления на унитазе',
+      title: 'Про себя, или Размышления на унитазе',
       meta: [
         {
           hid: 'description',
           name: 'description',
           content:
-            'Краткий пересказ моего мировоззрения, в чём смысл жизни, как жить, как поступать в разных ситуациях',
+            'Краткий пересказ моего мировоззрения, в чём смысл жизни, как жить, как должно поступать в разных ситуациях, написано в значительной мере сидя на унитазе',
         },
       ],
     }

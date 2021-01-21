@@ -1,6 +1,6 @@
 <template>
   <div class="display">
-    <div class="display-screen"></div>
+    <img :src="url" />
     <Heading2 :inner="caption" />
   </div>
 </template>
@@ -16,16 +16,10 @@ export default {
       type: String,
       default: '',
     },
+    url: {
+      type: String,
+      default: '',
+    },
   },
 }
 </script>
-
-<style lang="scss">
-@import 'assets/css/abstracts/_variables.scss';
-
-.display-screen {
-  background-color: red;
-  height: 80vh;
-  margin-bottom: 18px;
-}
-</style>
