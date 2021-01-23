@@ -49,6 +49,7 @@ p {
   margin-top: $p-margin-top;
   margin-bottom: $p-margin-bottom;
   text-indent: $p-text-indent;
+  hyphens: auto;
 }
 
 .p-wrapper {
@@ -56,7 +57,7 @@ p {
 }
 
 .no-indent {
-  text-indent: unset !important;
+  text-indent: unset;
 }
 
 .lead-in {

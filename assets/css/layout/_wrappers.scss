@@ -1,4 +1,7 @@
-[class$='-wrapper'] {
+.p-wrapper,
+.h1-wrapper,
+.h2-wrapper,
+.h3-wrapper {
   display: flex;
 
   // If not direct child of .spaced-below (means that .spaced-below > h1 will have its bottom margin)
