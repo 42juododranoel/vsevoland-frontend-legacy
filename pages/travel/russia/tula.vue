@@ -57,6 +57,10 @@ const contents = [
     source: '/travel/russia/tula/as-vss.jpg',
   },
   {
+    caption: 'Суровый тульский динозавр.',
+    source: '/travel/russia/tula/dinosaur.jpg',
+  },
+  {
     caption: 'По моей традиции последняя фотка — утки.',
     source: '/travel/russia/tula/ducks.jpg',
   },
