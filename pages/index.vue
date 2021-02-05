@@ -1,6 +1,9 @@
 <template>
   <div>
     <div class="container">
+      <br />
+      <br />
+
       <div class="row">
         <div class="col">
           <Mart title="Посетил 5 из 85 субъектов России" link="/travel/russia">
