@@ -13,28 +13,28 @@ $line-height: 27px;  // By hand
 
 $p-font-size: $font-size;
 $p-line-height: $line-height;
-$p-margin-top: -11px;  // By measuring outer wrapper padding
-$p-margin-bottom: -6px;  // By measuring outer wrapper padding
-$p-wrapper-margin-bottom: 17px;  // By making white lines equal in neighbor paragraphs
-$p-text-indent: 27px;  // By hand
+$p-margin-top: -11px;
+$p-margin-bottom: -7px;
+$p-wrapper-margin-bottom: 18px;
+$p-text-indent: 27px;
 
-$h1-font-size: 3 * $p-font-size;
-$h1-line-height: 76px;  // By aligning left and right lines
-$h1-margin-top: -30px;  // By measuring outer wrapper padding
-$h1-margin-bottom: -20px;  // By measuring outer wrapper padding
-$h1-wrapper-margin-bottom: 60px;  // By aligning left and right lines and measuring in Krita
+$h1-font-size: 54px;
+$h1-line-height: 81px;
+$h1-margin-top: -28px;
+$h1-margin-bottom: -18px;
+$h1-wrapper-margin-bottom: 74px;
 
-$h2-font-size: 2 * $p-font-size;
-$h2-line-height: $h2-font-size + ($h2-font-size / 2);
-$h2-margin-top: -20px;  // By measuring outer wrapper padding
-$h2-margin-bottom: -13px;  // By measuring outer wrapper padding
-$h2-wrapper-margin-bottom: 33px;  // By aligning left and right lines and measuring in Krita
+$h2-font-size: 36px;
+$h2-line-height: 54px;
+$h2-margin-top: -20px;
+$h2-margin-bottom: -13px;
+$h2-wrapper-margin-bottom: 60px;
 
 $h3-font-size: $p-font-size;
 $h3-line-height: $p-line-height;
-$h3-margin-top: -10px;  // By measuring outer wrapper padding
+$h3-margin-top: -10px;
 $h3-margin-bottom: $p-margin-bottom;
-$h3-wrapper-margin-bottom: 16px;  // By aligning left and right lines
+$h3-wrapper-margin-bottom: 17px;
 
 $leadin-letter-spacing: 2px;
 $leadin-font-size: 90%;

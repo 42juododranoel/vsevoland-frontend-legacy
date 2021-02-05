@@ -49,9 +49,9 @@
 </template>
 
 <script>
-import Page from '@/components/book/Page.vue'
-import Spread from '@/components/book/Spread.vue'
-import Paragraph from '@/components/Paragraph.vue'
+import Page from '@/components/layouting/Page.vue'
+import Spread from '@/components/layouting/Spread.vue'
+import Paragraph from '@/components/typography/Paragraph.vue'
 
 export default {
   layout: 'book',

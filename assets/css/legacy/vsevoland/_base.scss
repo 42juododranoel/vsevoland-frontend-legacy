@@ -210,34 +210,6 @@ figure + .p-wrapper {
   margin-top: var(--one-line);
 }
 
-
-// Lists
-
-ol, ul {
-	list-style-type: none;
-	padding-left: 0;
-  margin-left: var(--big-interline);
-
-  & li {
-    margin-bottom: var(--big-interline);
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.ul-wrapper,
-.ol-wrapper {
-  margin-bottom: var(--one-line);
-}
-
-.p-wrapper + .ul-wrapper,
-.p-wrapper + .ol-wrapper {
-  margin-top: -($one-line - $interline)  // Matches interline
-}
-
-
 // Image, picture, figure
 
 img {

@@ -7,6 +7,7 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint',
   },
+  ignorePatterns: ['components/custom/travel/Russia.vue'],
   extends: [
     '@nuxtjs',
     'prettier',
@@ -15,7 +16,6 @@ module.exports = {
     'plugin:nuxt/recommended',
   ],
   plugins: ['prettier'],
-  // add your custom rules here
   rules: {
     'nuxt/no-cjs-in-config': 'off',
   },

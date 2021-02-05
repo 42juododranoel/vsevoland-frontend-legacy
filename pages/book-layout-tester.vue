@@ -79,7 +79,7 @@
     <!-- Configure heading one margin-bottom -->
     <Spread>
       <Page>
-        <Heading1 inner="heading1 margin-bottom" />
+        <Heading1 inner="Configure heading one margin-bottom" />
         <Paragraph
           no-indent="true"
           inner="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mattis lectus. Aliquam tempor ligula eget euismod viverra. Donec tempus libero congue nibh pharetra lobortis. Ut malesuada mauris nibh, et finibus nisl iaculis ac. Integer vulputate leo id est congue varius at vitae odio. Vivamus varius libero finibus enim varius varius. Morbi id nulla elementum, scelerisque libero non, dapibus lacus. Nam laoreet neque nec mi mattis tempor."
@@ -97,7 +97,7 @@
     <!-- Configure heading two margin-bottom -->
     <Spread>
       <Page>
-        <Heading2 inner="heading2 margin-bottom" />
+        <Heading2 inner="Configure heading two margin-bottom" />
         <Paragraph
           no-indent="true"
           inner="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mattis lectus. Aliquam tempor ligula eget euismod viverra. Donec tempus libero congue nibh pharetra lobortis. Ut malesuada mauris nibh, et finibus nisl iaculis ac. Integer vulputate leo id est congue varius at vitae odio. Vivamus varius libero finibus enim varius varius. Morbi id nulla elementum, scelerisque libero non, dapibus lacus. Nam laoreet neque nec mi mattis tempor."
@@ -115,7 +115,7 @@
     <!-- Configure heading one margin-bottom -->
     <Spread>
       <Page>
-        <Heading3 inner="heading3 margin-bottom" />
+        <Heading3 inner="Configure heading three margin-bottom" />
         <Paragraph
           no-indent="true"
           inner="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mattis lectus. Aliquam tempor ligula eget euismod viverra. Donec tempus libero congue nibh pharetra lobortis. Ut malesuada mauris nibh, et finibus nisl iaculis ac. Integer vulputate leo id est congue varius at vitae odio. Vivamus varius libero finibus enim varius varius. Morbi id nulla elementum, scelerisque libero non, dapibus lacus. Nam laoreet neque nec mi mattis tempor."
@@ -155,12 +155,12 @@
 </template>
 
 <script>
-import Page from '@/components/book/Page.vue'
-import Spread from '@/components/book/Spread.vue'
-import Heading1 from '@/components/Heading1.vue'
-import Heading2 from '@/components/Heading2.vue'
-import Heading3 from '@/components/Heading3.vue'
-import Paragraph from '@/components/Paragraph.vue'
+import Page from '@/components/layouting/Page.vue'
+import Spread from '@/components/layouting/Spread.vue'
+import Heading1 from '@/components/typography/Heading1.vue'
+import Heading2 from '@/components/typography/Heading2.vue'
+import Heading3 from '@/components/typography/Heading3.vue'
+import Paragraph from '@/components/typography/Paragraph.vue'
 
 export default {
   components: {
@@ -194,9 +194,5 @@ export default {
 
 #configure-page-paddings .p-wrapper {
   background-color: white;
-}
-
-#configure-page-paddings .page:first-of-type {
-  border-right: 1px solid black;
 }
 </style>

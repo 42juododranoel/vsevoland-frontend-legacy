@@ -1,22 +1,19 @@
 <template>
-  <div>
+  <div class="thought">
     <Heading3 :inner="title" />
     <Paragraph :inner="text" no-indent="true" />
-    <Spacer size="1" />
   </div>
 </template>
 
 <script>
-import Heading3 from '@/components/Heading3.vue'
-import Paragraph from '@/components/Paragraph.vue'
-import Spacer from '@/components/Spacer.vue'
+import Heading3 from '@/components/typography/Heading3.vue'
+import Paragraph from '@/components/typography/Paragraph.vue'
 
 export default {
   name: 'Thought',
   components: {
     Heading3,
     Paragraph,
-    Spacer,
   },
   props: {
     title: {
@@ -30,3 +27,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.thought {
+  margin-bottom: 45px;
+}
+</style>
