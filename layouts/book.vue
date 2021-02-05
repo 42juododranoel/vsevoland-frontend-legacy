@@ -1,5 +1,5 @@
 <template>
-  <div class="book">
+  <div class="layout-book">
     <Nuxt />
   </div>
 </template>

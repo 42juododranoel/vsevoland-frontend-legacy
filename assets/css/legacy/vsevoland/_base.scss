@@ -1,82 +1,3 @@
-// Constants
-
-$font-size:     18px;
-$grid-cell:     $font-size / 2;
-$line-height:   $font-size + $grid-cell;
-
-:root {
-  --font-family-sans:            'PT Sans', sans-serif;
-  --font-family-sans-narrow:     'PT Sans Narrow', sans-serif;
-  --font-family-sans-caption:    'PT Sans Caption', sans-serif;
-  --font-family-serif:           'PT Serif', serif;
-  --font-family-serif-caption:   'PT Serif Caption', serif;
-  --font-family-mono:            'PT Mono', monospace;
-
-  --color-white:      #ffffff;
-  --color-light:      #f8f9fa;
-  --color-lightgray:  #dee2e6;
-  --color-gray:       #adb5bd;
-  --color-darkgray:   #495057;
-  --color-dark:       #212529;
-  --color-black:      #000000;
-
-  --width-sm: #{$width-sm};
-  --width-md: #{$width-md};
-  --width-lg: #{$width-lg};
-
-  --font-size: #{$font-size};
-  --grid-cell: #{$grid-cell};
-  --line-height: #{$line-height};
-}
-
-
-// Spacers
-
-$one-cell:     $grid-cell;
-$two-cells:    2 * $one-cell;
-$three-cells:  3 * $one-cell;
-
-$interline:      18px;
-$big-interline:  $interline + $grid-cell;
-
-$one-line:     45px;
-$two-lines:    2 * $one-line;
-$three-lines:  3 * $one-line;
-
-:root {
-  --one-cell:     #{$one-cell};
-  --two-cells:    #{$two-cells};
-  --three-cells:  #{$three-cells};
-
-  --interline:      #{$interline};
-  --big-interline:  #{$big-interline};
-
-  --one-line:     #{$one-line};
-  --two-lines:    #{$two-lines};
-  --three-lines:  #{$three-lines};
-}
-
-.one-cell-below     { margin-bottom: var(--one-cell) !important }     // 9px
-.two-cells-below    { margin-bottom: var(--two-cells) !important }    // 18px
-.three-cells-below  { margin-bottom: var(--three-cells) !important }  // 36px
-
-.interline-below      { margin-bottom: var(--interline) !important }      // 18px
-.big-interline-below  { margin-bottom: var(--big-interline) !important }  // 27px
-
-.one-line-below     { margin-bottom: var(--one-line) !important }     // 45px
-.two-lines-below    { margin-bottom: var(--two-lines) !important }    // 90px
-.three-lines-below  { margin-bottom: var(--three-lines) !important }  // 135px
-
-.unspaced-above   { margin-top: 0 !important }
-
-
-// Fields
-
-article {
-  padding-bottom: var(--two-lines);
-}
-
-
 // Wrappers
 
 .h1-wrapper,
@@ -99,116 +20,6 @@ article {
   }
 }
 
-
-// Headings
-
-h1, h2, h3 {
-  font-family: var(--font-family-sans-caption)
-}
-
-
-// Heading one
-
-$h1-font-size-sm: (3 * $font-size);
-$h1-font-size-md: (5 * $font-size);
-
-h1 {
-  font-size: $h1-font-size-sm;
-  line-height: $h1-font-size-sm + (3 * $grid-cell);
-  margin-top: -32px;
-  margin-bottom: -20px;
-}
-
-@include media-breakpoint-up($width-md) {
-  h1 {
-    font-size: $h1-font-size-md;
-    line-height: $h1-font-size-md + (3 * $grid-cell);
-    margin-top: -45px;
-    margin-bottom: -25px;
-  }
-}
-
-.h1-wrapper {
-  margin-top: var(--two-lines);
-  margin-bottom: var(--two-lines);
-}
-
-
-// Heading two
-
-$h2-font-size-sm: (1.5 * $font-size);
-$h2-font-size-md: (2 * $font-size);
-
-h2 {
-  font-size: $h2-font-size-sm;
-  line-height: $h2-font-size-sm + $grid-cell;
-  margin-top: -14px;
-  margin-bottom: -8px;
-}
-
-@include media-breakpoint-up($width-md) {
-  h2 {
-    font-size: $h2-font-size-md;
-    line-height: $h2-font-size-md + $grid-cell;
-    margin-top: -17px;
-    margin-bottom: -9px;
-  }
-}
-
-.h2-wrapper {
-  margin-top: var(--two-lines);
-  margin-bottom: var(--one-line);
-}
-
-
-// Heading three, paragraph, figcaption, subscription, indent
-
-p,
-h3,
-figcaption {
-  font-size: $font-size;
-  line-height: $line-height;
-  margin-top: -11px;
-  margin-bottom: -7px;
-}
-
-figcaption,
-.subscription {
-	font-family: var(--font-family-sans);
-}
-
-.subscription {
-	font-style: italic;
-}
-
-.h3-wrapper {
-  margin-top: calc(var(--one-line) + var(--interline));
-  margin-bottom: var(--interline);
-}
-
-.p-wrapper {
-  margin-bottom: var(--one-line);
-}
-
-.figcaption-wrapper {
-	margin-top: var(--interline);
-  margin-bottom: var(--interline);
-}
-
-.indent {
-  font-family: var(--font-family-sans);
-	margin-left: (3 * $grid-cell);
-	margin-right: (3 * $grid-cell);
-}
-
-.p-wrapper + .indent-wrapper,
-.p-wrapper + .pre-wrapper {
-  margin-top: -($font-size)  // Matches big interline
-}
-
-figure + .p-wrapper {
-  margin-top: var(--one-line);
-}
 
 // Image, picture, figure
 
@@ -248,30 +59,6 @@ img {
 
 figure + figure {
   margin-top: var(--one-line);
-}
-
-
-// Pre
-
-$pre-font-size: $font-size;
-$pre-line-height: $line-height;
-$pre-top-compensator: 10px;
-$pre-bottom-compensator: 8px;
-
-pre {
-  font-size: $pre-font-size;
-  line-height: $pre-line-height;
-  margin-top: -$pre-top-compensator;
-  margin-bottom: -$pre-bottom-compensator;
-}
-
-pre {
-	white-space: pre-wrap;
-	margin-right: $two-cells;
-}
-
-.pre-wrapper {
-  margin-bottom: $one-line + $grid-cell;
 }
 
 
@@ -324,6 +111,12 @@ figcaption {
 
 
 // Link
+
+--link-color:                   #0064a8;
+--link-color-hover:             #a03000;
+--link-underline-color:         rgba(0,  100, 168, 0.2);
+--link-underline-color-hover:   rgba(160, 48,   0, 0.2);
+
 
 .inline-link {
 	color: var(--link-color);

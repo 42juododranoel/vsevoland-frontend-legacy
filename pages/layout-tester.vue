@@ -130,6 +130,27 @@
       </Page>
     </Spread>
 
+    <!-- Configure heading one margin-bottom -->
+    <Spread>
+      <Page>
+        <Paragraph no-indent="true" inner="Configure one line spacer" />
+        <Spacer size="one-line" />
+        <Paragraph no-indent="true" inner="Configure two lines spacer" />
+        <Spacer size="two-lines" />
+        <Paragraph no-indent="true" inner="Configure three lines spacer" />
+        <Spacer size="three-lines" />
+        <Paragraph no-indent="true" inner="Configure interline spacer" />
+        <Spacer size="interline" />
+        <Paragraph no-indent="true" inner="Lorem ipsum dolor sit amet" />
+      </Page>
+      <Page>
+        <Paragraph
+          no-indent="true"
+          inner="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mattis lectus. Aliquam tempor ligula eget euismod viverra. Donec tempus libero congue nibh pharetra lobortis. Ut malesuada mauris nibh, et finibus nisl iaculis ac. Integer vulputate leo id est congue varius at vitae odio. Vivamus varius libero finibus enim varius varius. Morbi id nulla elementum, scelerisque libero non, dapibus lacus. Nam laoreet neque nec mi mattis tempor. Phasellus tempus tempor sem interdum facilisis. Maecenas auctor nulla ut sapien mollis, ac tempor velit vulputate. Nunc arcu nisl, accumsan eget erat eget, posuere congue augue. Maecenas consectetur pulvinar luctus. Ut sed orci turpis. Fusce maximus porttitor ante. Quisque vel placerat elit, sed efficitur sem. Curabitur venenatis tincidunt porttitor. Integer vulputate leo id est congue varius at vitae odio. Vivamus varius libero finibus enim varius varius. Morbi id nulla elementum, scelerisque libero non, dapibus lacus. Maecenas auctor nulla ut sapien mollis, ac tempor velit vulputate. Nunc arcu nisl, accumsan eget erat eget, posuere congue augue. Maecenas consectetur pulvinar luctus. Ut sed orci turpis. Fusce maximus porttitor ante. Quisque vel placerat elit, sed efficitur sem. Curabitur venenatis tincidunt porttitor. Integer vulputate leo id est congue varius at vitae odio. Vivamus varius libero finibus enim varius varius. Morbi id nulla elementum, scelerisque libero non, dapibus lacus."
+        />
+      </Page>
+    </Spread>
+
     <!-- Configure page paddings -->
     <Spread id="configure-page-paddings">
       <Page>
@@ -161,6 +182,7 @@ import Heading1 from '@/components/typography/Heading1.vue'
 import Heading2 from '@/components/typography/Heading2.vue'
 import Heading3 from '@/components/typography/Heading3.vue'
 import Paragraph from '@/components/typography/Paragraph.vue'
+import Spacer from '@/components/typography/Spacer.vue'
 
 export default {
   components: {
@@ -170,6 +192,7 @@ export default {
     Heading2,
     Heading3,
     Paragraph,
+    Spacer,
   },
 }
 </script>

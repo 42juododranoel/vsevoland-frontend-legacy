@@ -1,7 +1,7 @@
 <template>
   <div class="picture-wrapper">
     <picture>
-      <img :src="source" />
+      <img :src="link" />
     </picture>
   </div>
 </template>
@@ -13,6 +13,11 @@ export default {
     source: {
       type: String,
       default: '',
+    },
+  },
+  computed: {
+    link() {
+      return 'https://cdn.vsevo.land' + this.source
     },
   },
 }

@@ -1,23 +1,30 @@
 <template>
   <div class="mart">
-    <div class="mart-content">
-      <slot />
-    </div>
-    <div class="mart-title">
-      <br />
-      <Heading2 :inner="title" />
-    </div>
-    <br />
-    <br />
-    <br />
+    <NuxtLink :to="link">
+      <div class="mart-content">
+        <slot />
+      </div>
+      <div class="mart-title">
+        <Spacer size="interline" />
+        <Heading2 :inner="title" />
+      </div>
+      <Spacer size="two-lines" />
+    </NuxtLink>
   </div>
 </template>
 
 <script>
+import Spacer from '@/components/typography/Spacer.vue'
+
 export default {
   name: 'Mart',
+  components: { Spacer },
   props: {
     title: {
+      type: String,
+      default: '',
+    },
+    link: {
       type: String,
       default: '',
     },
@@ -25,8 +32,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.mart-content {
-  border: 1px solid lightgrey;
-}
-</style>
+<style lang="scss"></style>
