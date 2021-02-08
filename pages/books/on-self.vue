@@ -4,9 +4,7 @@
       <picture>
         <source
           media="(orientation:portrait)"
-          srcset="
-            https://vsevoland-spaces.fra1.cdn.digitaloceanspaces.com/on-self/on-self.png
-          "
+          srcset="https://vsevoland-spaces.fra1.cdn.digitaloceanspaces.com/on-self/on-self.png"
         />
         <source
           media="(orientation:landscape)"
@@ -14,9 +12,7 @@
             https://vsevoland-spaces.fra1.cdn.digitaloceanspaces.com/on-self/on-self-landscape.png
           "
         />
-        <img
-          src="https://vsevoland-spaces.fra1.cdn.digitaloceanspaces.com/on-self/on-self.png"
-        />
+        <img src="https://vsevoland-spaces.fra1.cdn.digitaloceanspaces.com/on-self/on-self.png" />
       </picture>
     </Spread>
 
@@ -98,8 +94,7 @@ const contents = {
             },
             {
               title: 'F.I.L.O.',
-              text:
-                'Knowledge of self shines brighter than all — так сказал Шинго Аннен.',
+              text: 'Knowledge of self shines brighter than all — так сказал Шинго Аннен.',
             },
             {
               title: 'Ожидания',

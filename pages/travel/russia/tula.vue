@@ -33,13 +33,11 @@ import Figure from '@/components/typography/Figure.vue'
 
 const contents = [
   {
-    caption:
-      'Таких разных пряников с таким большим количеством начинки в жизни не видал.',
+    caption: 'Таких разных пряников с таким большим количеством начинки в жизни не видал.',
     source: '/travel/russia/tula/pryanik.jpg',
   },
   {
-    caption:
-      'Даже тульские дома похожи на пряники. На фотке замечен неопознанный летающий палец.',
+    caption: 'Даже тульские дома похожи на пряники. На фотке замечен неопознанный летающий палец.',
     source: '/travel/russia/tula/building.jpg',
   },
   {
@@ -61,7 +59,7 @@ const contents = [
     source: '/travel/russia/tula/dinosaur.jpg',
   },
   {
-    caption: 'По моей традиции последняя фотка — утки.',
+    caption: 'По традиции последняя фотка — утки.',
     source: '/travel/russia/tula/ducks.jpg',
   },
 ]

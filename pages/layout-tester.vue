@@ -9,9 +9,7 @@
         />
       </Page>
       <Page>
-        <Heading1
-          inner="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-        />
+        <Heading1 inner="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
         <Heading2
           inner="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet mattis lectus."
         />
@@ -55,10 +53,7 @@
     <!-- Configure paragraph margin-bottom -->
     <Spread>
       <Page>
-        <Paragraph
-          no-indent="true"
-          inner="Configure paragraph margin-bottom."
-        />
+        <Paragraph no-indent="true" inner="Configure paragraph margin-bottom." />
       </Page>
 
       <Page>

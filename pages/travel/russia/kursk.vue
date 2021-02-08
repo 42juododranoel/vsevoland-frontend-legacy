@@ -42,8 +42,7 @@ const contents = [
     source: '/travel/russia/kursk/lenin.jpg',
   },
   {
-    caption:
-      'Идёшь по курской улице, а на тебя с крыши смотрит орден Великой отечественной войны.',
+    caption: 'Идёшь по курской улице, а на тебя с крыши смотрит орден Великой отечественной войны.',
     source: '/travel/russia/kursk/ussr.jpg',
   },
   {

@@ -6,7 +6,7 @@
 
       <div class="row">
         <div class="col">
-          <Mart title="Посетил 5 из 85 субъектов России" link="/travel/russia">
+          <Mart title="Посетил 6 из 85 субъектов России" link="/travel/russia">
             <Russia />
           </Mart>
         </div>

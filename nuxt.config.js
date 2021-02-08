@@ -56,6 +56,7 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
   ],
   /*
    ** Axios module configuration
@@ -68,4 +69,14 @@ module.exports = {
    */
   build: {},
   telemetry: false,
+  proxy: ['/api/'].reduce((result, item) => {
+    result[item] = {
+      target: 'https://' + process.env.DOMAIN_NAME || 'http://localhost:8000',
+      headers: {
+        'X-Forwarded-Host': process.env.DOMAIN_NAME || 'localhost',
+        'X-Forwarded-Proto': 'HTTPS',
+      },
+    }
+    return result
+  }, {}),
 }
