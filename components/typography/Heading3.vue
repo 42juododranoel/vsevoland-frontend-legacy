@@ -23,15 +23,38 @@ export default {
 
 <style lang="scss">
 @import 'assets/css/abstracts/_variables.scss';
+@import 'assets/css/abstracts/_mixins.scss';
 
-h3 {
-  font-size: $h3-font-size;
-  line-height: $h3-line-height;
-  margin-top: $h3-margin-top;
-  margin-bottom: $h3-margin-bottom;
-}
+$element-properties: (
+  font-size: (
+    var(--p-font-size),
+    var(--p-font-size),
+    var(--p-font-size),
+  ),
+  line-height: (
+    #{$line-height},
+    #{$line-height},
+    #{$line-height},
+  ),
+  margin-top: (
+    -10px,
+    -10px,
+    -15px,
+  ),
+  margin-bottom: (
+    var(--p-margin-bottom),
+    var(--p-margin-bottom),
+    var(--p-margin-bottom),
+  ),
+);
 
-.h3-wrapper {
-  margin-bottom: $h3-wrapper-margin-bottom;
-}
+$wrapper-properties: (
+  margin-bottom: (
+    17px,
+    17px,
+    24px,
+  ),
+);
+
+@include set-properties('h3', $element-properties, $wrapper-properties);
 </style>

@@ -11,8 +11,6 @@
       xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
       xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
       version="1.0"
-      width="1650"
-      height="1000"
       viewBox="0 0 1650 1000"
       inkscape:version="0.91 r13725"
       sodipodi:docname="Map of Russia blank.svg"

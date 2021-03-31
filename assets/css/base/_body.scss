@@ -22,7 +22,15 @@ html {
 }
 
 body {
-  font-size: $font-size;
   font-family: $font-family-serif;
   line-height: $line-height;
+}
+
+@each $viewport, $width in $viewports {
+  $viewport-index: index(map-keys($viewports), $viewport);
+  @include only-viewport($viewport) {
+    body {
+      font-size: #{nth($font-sizes, $viewport-index)};
+    }
+  }
 }

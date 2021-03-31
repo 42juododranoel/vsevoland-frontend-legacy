@@ -57,6 +57,7 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
+    'nuxt-lazy-load',
   ],
   /*
    ** Axios module configuration

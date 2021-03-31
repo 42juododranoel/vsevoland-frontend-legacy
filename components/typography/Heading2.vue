@@ -23,15 +23,44 @@ export default {
 
 <style lang="scss">
 @import 'assets/css/abstracts/_variables.scss';
+@import 'assets/css/abstracts/_mixins.scss';
 
-h2 {
-  font-size: $h2-font-size;
-  line-height: $h2-line-height;
-  margin-top: $h2-margin-top;
-  margin-bottom: $h2-margin-bottom;
-}
+// $h2-font-size: 36px;
+// $h2-line-height: 54px;
+// $h2-margin-top: -20px;
+// $h2-margin-bottom: -13px;
+// $h2-wrapper-margin-bottom: 60px;
 
-.h2-wrapper {
-  margin-bottom: $h2-wrapper-margin-bottom;
-}
+$element-properties: (
+  font-size: (
+    36px,
+    36px,
+    45px,
+  ),
+  line-height: (
+    #{$line-height},
+    #{$line-height},
+    #{$line-height},
+  ),
+  margin-top: (
+    -23px,
+    -23px,
+    -27px,
+  ),
+  margin-bottom: (
+    -13px,
+    -13px,
+    -17px,
+  ),
+);
+
+$wrapper-properties: (
+  margin-bottom: (
+    37px,
+    37px,
+    98px,
+  ),
+);
+
+@include set-properties('h2', $element-properties, $wrapper-properties);
 </style>

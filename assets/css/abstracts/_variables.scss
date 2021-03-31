@@ -1,55 +1,40 @@
-// Inspired by Bureau Gorbunov https://bureau.ru/soviet/20190221/
 $width-sm: 0px;
-$width-md: 960px;
-$width-lg: 1400px;
+$width-md: 1000px;
+$width-lg: 2000px;
 
-// Thanks Paratype https://www.paratype.com/
+$viewports: (
+  sm: $width-sm,
+  md: $width-md,
+  lg: $width-lg,
+);
+
 $font-family-sans: 'PT Sans', sans-serif;
 $font-family-serif: 'PT Serif', serif;
 $font-family-display: 'PT Sans Caption', sans-serif;
 
-$font-size: 18px;  // By hand
-$line-height: 27px;  // By hand
+$font-size-sm: 18px;
+$font-size-md: 18px;
+$font-size-lg: 27px;
 
-$p-font-size: $font-size;
-$p-line-height: $line-height;
-$p-margin-top: -11px;
-$p-margin-bottom: -7px;
-$p-wrapper-margin-bottom: 18px;
-$p-text-indent: 27px;
+$font-sizes: (
+  $font-size-sm,
+  $font-size-md,
+  $font-size-lg,
+);
 
-$h1-font-size: 54px;
-$h1-line-height: 81px;
-$h1-margin-top: -28px;
-$h1-margin-bottom: -18px;
-$h1-wrapper-margin-bottom: 74px;
+$line-height: 1.5;
 
-$h2-font-size: 36px;
-$h2-line-height: 54px;
-$h2-margin-top: -20px;
-$h2-margin-bottom: -13px;
-$h2-wrapper-margin-bottom: 60px;
-
-$h3-font-size: $p-font-size;
-$h3-line-height: $p-line-height;
-$h3-margin-top: -10px;
-$h3-margin-bottom: $p-margin-bottom;
-$h3-wrapper-margin-bottom: 17px;
-
-$leadin-letter-spacing: 2px;
-$leadin-font-size: 90%;
-
-$interline:      18px;
-$big-interline:  27px;
-
-$one-line:     45px;
-$one-and-half-lines: 63px;
-$two-lines:    2 * $one-line;
-$three-lines:  3 * $one-line;
-
-// Inspired by Bureau Gorbunov https://bureau.rocks/books/ui-en/demo/
-// And Jan Tschichold's “The Form of the Book”.
-
+// $interline:      18px;
+// $big-interline:  27px;
+//
+// $one-line:     45px;
+// $one-and-half-lines: 63px;
+// $two-lines:    2 * $one-line;
+// $three-lines:  3 * $one-line;
+//
+// // Inspired by Bureau Gorbunov https://bureau.rocks/books/ui-en/demo/
+// // And Jan Tschichold's “The Form of the Book”.
+//
 $spread-header-size-sm: calc(100vh / 9 / 2);
 $spread-header-size-md: calc(100vh / 9 / 2 * 1.5);
 $spread-footer-size-sm: calc(100vh / 9 / 2);

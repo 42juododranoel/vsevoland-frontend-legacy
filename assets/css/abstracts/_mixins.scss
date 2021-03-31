@@ -15,3 +15,66 @@
     @content;
   }
 }
+
+@mixin media-breakpoint-sm() {
+  @media (min-width: $width-sm) and (max-width: $width-md) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-md() {
+  @media (min-width: $width-md) and (max-width: $width-lg) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-lg() {
+  @media (min-width: $width-lg) {
+    @content;
+  }
+}
+
+@mixin only-viewport($viewport) {
+  @if $viewport == 'sm' {
+    @include media-breakpoint-sm() {
+      @content;
+    }
+  } @else if $viewport == 'md' {
+    @include media-breakpoint-md() {
+      @content;
+    }
+  } @else if $viewport == 'lg' {
+    @include media-breakpoint-lg() {
+      @content;
+    }
+  }
+}
+
+@mixin set-properties($element, $element-properties, $wrapper-properties) {
+  @each $viewport, $width in $viewports {
+    @include only-viewport($viewport) {
+      :root {
+        $viewport-index: index(map-keys($viewports), $viewport);
+        @each $property, $values in $element-properties {
+          --#{$element}-#{$property}: #{nth($values, $viewport-index)};
+        }
+        @each $property, $values in $wrapper-properties {
+          --#{$element}-wrapper-#{$property}: #{nth($values, $viewport-index)};
+        }
+      }
+    }
+  }
+
+  #{$element} {
+    @each $property in map-keys($element-properties) {
+      #{$property}: var(--#{$element}-#{$property});
+    }
+  }
+
+  .#{$element}-wrapper {
+    @each $property in map-keys($wrapper-properties) {
+      #{$property}: var(--#{$element}-wrapper-#{$property});
+    }
+  }
+
+}

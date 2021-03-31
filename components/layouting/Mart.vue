@@ -1,15 +1,19 @@
 <template>
   <div class="mart">
-    <NuxtLink :to="link">
-      <div class="mart-content">
-        <slot />
+    <div class="row">
+      <div class="col">
+        <NuxtLink :to="link">
+          <div class="mart-content">
+            <slot />
+          </div>
+          <div class="mart-title">
+            <Spacer size="interline" />
+            <Heading2 :inner="title" />
+          </div>
+        </NuxtLink>
       </div>
-      <div class="mart-title">
-        <Spacer size="interline" />
-        <Heading2 :inner="title" />
-      </div>
-      <Spacer size="two-lines" />
-    </NuxtLink>
+    </div>
+    <Spacer size="two-lines" />
   </div>
 </template>
 

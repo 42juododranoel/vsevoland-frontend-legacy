@@ -44,29 +44,58 @@ export default {
 
 <style lang="scss">
 @import 'assets/css/abstracts/_variables.scss';
+@import 'assets/css/abstracts/_mixins.scss';
 
-p {
-  margin-top: $p-margin-top;
-  margin-bottom: $p-margin-bottom;
-  text-indent: $p-text-indent;
-  hyphens: auto;
-}
+$element-properties: (
+  font-size: (
+    #{$font-size-sm},
+    #{$font-size-md},
+    #{$font-size-lg},
+  ),
+  line-height: (
+    #{$line-height},
+    #{$line-height},
+    #{$line-height},
+  ),
+  margin-top: (
+    -10px,
+    -10px,
+    -16px,
+  ),
+  margin-bottom: (
+    -7px,
+    -7px,
+    -9px,
+  ),
+  text-indent: (
+    27px,
+    27px,
+    45px,
+  ),
+);
 
-.p-wrapper {
-  margin-bottom: $p-wrapper-margin-bottom;
+$wrapper-properties: (
+  margin-bottom: (
+    18px,
+    18px,
+    27px,
+  ),
+);
+
+@include set-properties('p', $element-properties, $wrapper-properties);
+
+.initial::first-letter {
+  font-size: 150%;
 }
 
 .no-indent {
   text-indent: unset;
 }
 
-.lead-in {
-  text-transform: uppercase;
-  letter-spacing: $leadin-letter-spacing;
-  font-size: $leadin-font-size;
-}
-
-.initial::first-letter {
-  font-size: 150%;
-}
+// .lead-in {
+//   text-transform: uppercase;
+//   letter-spacing: $leadin-letter-spacing;
+//   font-size: 90%;
+// }
+//
 </style>

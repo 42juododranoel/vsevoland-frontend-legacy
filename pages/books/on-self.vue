@@ -896,9 +896,9 @@ export default {
 @import 'assets/css/abstracts/_variables.scss';
 @import 'assets/css/abstracts/_mixins.scss';
 
-@include media-breakpoint-up($width-md) {
-  .page {
-    margin-bottom: -$one-line;
-  }
-}
+// @include media-breakpoint-up($width-md) {
+//   .page {
+//     margin-bottom: -$one-line;
+//   }
+// }
 </style>

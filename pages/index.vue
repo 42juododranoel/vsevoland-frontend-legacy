@@ -1,17 +1,8 @@
 <template>
-  <div>
-    <div class="container">
-      <br />
-      <br />
-
-      <div class="row">
-        <div class="col">
-          <Mart title="Посетил 6 из 85 субъектов России" link="/travel/russia">
-            <Russia />
-          </Mart>
-        </div>
-      </div>
-    </div>
+  <div class="container">
+    <Mart title="Посетил 6 из 85 субъектов России" link="/travel/russia">
+      <Russia />
+    </Mart>
   </div>
 </template>
 
