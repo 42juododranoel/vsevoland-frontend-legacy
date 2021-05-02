@@ -23,6 +23,9 @@ export default {
     content: {
       type: String,
       default: 'pages',
+      validator(value) {
+        return ['pages', 'splash'].includes(value)
+      },
     },
   },
   computed: {
@@ -56,7 +59,7 @@ export default {
   grid-template-columns: 1fr;
 }
 
-@include media-breakpoint-between($width-sm, $width-md) {
+@include media-breakpoint-sm() {
   .spread-content {
     grid-template-rows: $spread-header-size-sm 1fr $spread-footer-size-sm;
   }
@@ -64,12 +67,12 @@ export default {
     grid-template-columns: 1fr;
   }
   .spread-footer {
-    padding-left: $spread-outer-size-sm;
-    padding-right: $spread-outer-size-sm;
+    padding-left: $page-outer-padding-sm;
+    padding-right: $page-outer-padding-sm;
   }
 }
 
-@include media-breakpoint-up($width-md) {
+@include media-breakpoint-md-up() {
   .spread-content {
     grid-template-rows: $spread-header-size-md 1fr $spread-footer-size-md;
   }
@@ -77,8 +80,8 @@ export default {
     grid-template-columns: 1fr 1fr;
   }
   .spread-footer {
-    padding-left: $spread-outer-size-md;
-    padding-right: $spread-outer-size-md;
+    padding-left: $page-outer-padding-md;
+    padding-right: $page-outer-padding-md;
   }
 }
 </style>

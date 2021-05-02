@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" class="page">
+  <div class="page">
     <slot />
   </div>
 </template>
@@ -7,12 +7,6 @@
 <script>
 export default {
   name: 'Page',
-  props: {
-    id: {
-      type: String,
-      default: '',
-    },
-  },
 }
 </script>
 
@@ -20,38 +14,38 @@ export default {
 @import 'assets/css/abstracts/_variables.scss';
 @import 'assets/css/abstracts/_mixins.scss';
 
-@include media-breakpoint-between($width-sm, $width-md - 1px) {
+@include media-breakpoint-sm() {
   .page {
     grid-column: 1;
 
     &:first-of-type {
       grid-row: 1;
-      padding-left: $spread-outer-size-sm;
+      padding-left: $page-outer-padding-sm;
       padding-right: $page-inner-padding-sm;
     }
 
     &:last-of-type {
       grid-row: 2;
       padding-left: $page-inner-padding-sm;
-      padding-right: $spread-outer-size-sm;
+      padding-right: $page-outer-padding-sm;
     }
   }
 }
 
-@include media-breakpoint-up($width-md) {
+@include media-breakpoint-md-up() {
   .page {
     grid-row: 1;
 
     &:first-of-type {
       grid-column: 1;
-      padding-left: $spread-outer-size-md;
+      padding-left: $page-outer-padding-md;
       padding-right: $page-inner-padding-md;
     }
 
     &:last-of-type {
       grid-column: 2;
       padding-left: $page-inner-padding-md;
-      padding-right: $spread-outer-size-md;
+      padding-right: $page-outer-padding-md;
     }
   }
 }

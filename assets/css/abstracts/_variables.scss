@@ -1,3 +1,5 @@
+// Grid
+
 $width-sm: 0px;
 $width-md: 1000px;
 $width-lg: 2000px;
@@ -8,39 +10,15 @@ $viewports: (
   lg: $width-lg,
 );
 
-$font-family-sans: 'PT Sans', sans-serif;
-$font-family-serif: 'PT Serif', serif;
-$font-family-display: 'PT Sans Caption', sans-serif;
 
-$font-size-sm: 18px;
-$font-size-md: 18px;
-$font-size-lg: 27px;
+// Books
 
-$font-sizes: (
-  $font-size-sm,
-  $font-size-md,
-  $font-size-lg,
-);
-
-$line-height: 1.5;
-
-// $interline:      18px;
-// $big-interline:  27px;
-//
-// $one-line:     45px;
-// $one-and-half-lines: 63px;
-// $two-lines:    2 * $one-line;
-// $three-lines:  3 * $one-line;
-//
-// // Inspired by Bureau Gorbunov https://bureau.rocks/books/ui-en/demo/
-// // And Jan Tschichold's “The Form of the Book”.
-//
 $spread-header-size-sm: calc(100vh / 9 / 2);
 $spread-header-size-md: calc(100vh / 9 / 2 * 1.5);
 $spread-footer-size-sm: calc(100vh / 9 / 2);
 $spread-footer-size-md: calc(100vh / 9 / 2 * 1.5 * 2);
-$spread-outer-size-sm: calc(100vw / 2 / 9 * 0.75);
-$spread-outer-size-md: calc(100vw / 2 / 9 * 1.5);
 
+$page-outer-padding-sm: calc(100vw / 2 / 9 * 0.75);
+$page-outer-padding-md: calc(100vw / 2 / 9 * 1.5);
 $page-inner-padding-sm: calc(100vw / 2 / 9 * 0.75);
 $page-inner-padding-md: calc(100vw / 2 / 9 * 0.75);
