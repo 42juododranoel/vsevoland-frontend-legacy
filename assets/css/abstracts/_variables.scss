@@ -14,8 +14,8 @@ $viewports: (
 // Books
 
 $spread-header-size-sm: calc(100vh / 9 / 2);
+$spread-footer-size-sm: calc(100vh / 9 / 2 * 1.5);
 $spread-header-size-md: calc(100vh / 9 / 2 * 1.5);
-$spread-footer-size-sm: calc(100vh / 9 / 2);
 $spread-footer-size-md: calc(100vh / 9 / 2 * 1.5 * 2);
 
 $page-outer-padding-sm: calc(100vw / 2 / 9 * 0.75);
