@@ -103,8 +103,8 @@
 </template>
 
 <script>
-import Page from '@/components/layouting/Page.vue'
-import Spread from '@/components/layouting/Spread.vue'
+import Page from '@/components/book/Page.vue'
+import Spread from '@/components/book/Spread.vue'
 
 export default {
   components: {
