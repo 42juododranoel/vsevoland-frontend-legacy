@@ -1,3 +1,14 @@
+// Meta mixins
+
+@mixin media-breakpoint-up($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+
+// Viewport-related shortcuts
+
 @mixin media-breakpoint-sm() {
   @media (min-width: $width-sm) and (max-width: $width-md) {
     @content;
@@ -10,14 +21,14 @@
   }
 }
 
-@mixin media-breakpoint-lg() {
-  @media (min-width: $width-lg) {
+@mixin media-breakpoint-md-up() {
+  @media (min-width: $width-md) {
     @content;
   }
 }
 
-@mixin media-breakpoint-md-up() {
-  @media (min-width: $width-md) {
+@mixin media-breakpoint-lg() {
+  @media (min-width: $width-lg) {
     @content;
   }
 }
