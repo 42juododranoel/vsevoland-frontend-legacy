@@ -1,12 +1,3 @@
-// Meta mixins
-
-@mixin media-breakpoint-up($width) {
-  @media (min-width: $width) {
-    @content;
-  }
-}
-
-
 // Viewport-related shortcuts
 
 @mixin media-breakpoint-sm() {
@@ -31,4 +22,61 @@
   @media (min-width: $width-lg) {
     @content;
   }
+}
+
+
+// Meta mixins
+
+@mixin only-viewport($viewport) {
+  @if $viewport == 'sm' {
+    @include media-breakpoint-sm() {
+      @content;
+    }
+  } @else if $viewport == 'md' {
+    @include media-breakpoint-md() {
+      @content;
+    }
+  } @else if $viewport == 'lg' {
+    @include media-breakpoint-lg() {
+      @content;
+    }
+  }
+}
+
+
+// CSS shortcuts
+
+@mixin set-properties($element, $element-properties, $wrapper-properties) {
+  @each $viewport, $width in $viewports {
+    @include only-viewport($viewport) {
+      :root {
+        $viewport-index: index(map-keys($viewports), $viewport);
+
+        // Set root variables for this element
+        @each $property, $values in $element-properties {
+          --#{$element}-#{$property}: #{nth($values, $viewport-index)};
+        }
+
+        // Set root variables for this element’s wrapper
+        @each $property, $values in $wrapper-properties {
+          --#{$element}-wrapper-#{$property}: #{nth($values, $viewport-index)};
+        }
+      }
+    }
+  }
+
+  // Set this element properties to var(--ELEMENT-PROPERTYNAME)
+  #{$element} {
+    @each $property in map-keys($element-properties) {
+      #{$property}: var(--#{$element}-#{$property});
+    }
+  }
+
+  // Set this element’s wrapper properties to var(--ELEMENT-wrapper-PROPERTYNAME)
+  .#{$element}-wrapper {
+    @each $property in map-keys($wrapper-properties) {
+      #{$property}: var(--#{$element}-wrapper-#{$property});
+    }
+  }
+
 }

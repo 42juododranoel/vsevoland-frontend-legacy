@@ -1,0 +1,19 @@
+body {
+  font-family: $font-family-serif;
+  line-height: $line-height;
+}
+
+$font-sizes: (
+  $font-size-sm,
+  $font-size-md,
+  $font-size-lg,
+);
+
+@each $viewport, $width in $viewports {
+  $viewport-index: index(map-keys($viewports), $viewport);
+  @include only-viewport($viewport) {
+    body {
+      font-size: #{nth($font-sizes, $viewport-index)};
+    }
+  }
+}

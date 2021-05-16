@@ -2,11 +2,6 @@
 
 $grid-column-count: 16;
 
-$viewports: (
-  sm: $width-sm,
-  md: $width-md,
-  lg: $width-lg,
-);
 
 // Make row store 16 columns
 
@@ -57,12 +52,13 @@ $viewports: (
 @each $viewport, $width in $viewports {
   $infix: get-breakpoint-infix($viewport);
 
-  @include media-breakpoint-up($width) {
+  @media (min-width: $width) {
     .col#{$infix} { grid-column: 1 / -1 }
 
     @for $span from 1 through $grid-column-count {
       .off-#{$span}#{$infix} { grid-column-start: $span + 1 }
       .col-#{$span}#{$infix} { grid-column-end: span $span }
     }
+
   }
 }
