@@ -1,0 +1,14 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+name: vsevoland
+region: blr
+static_sites:
+- environment_slug: html
+  git:
+    branch: main
+    repo_clone_url: https://github.com/vsevolod-skripnik/vsevoland-frontend.git
+  name: vsevoland
+  routes:
+  - path: /
+  source_dir: /dist
