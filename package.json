@@ -16,7 +16,7 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "morgan": "^1.10.0",
-    "nuxt": "^2.13.0",
+    "nuxt": "^2.15.8",
     "nuxt-lazy-load": "^1.2.5",
     "typograf": "^6.11.3"
   },
