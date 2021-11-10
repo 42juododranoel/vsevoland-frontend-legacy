@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/books/zeroism", {data:[{}],fetch:{},mutations:void 0});
