@@ -37,7 +37,12 @@ const contents = {
             {
               title: 'Whatever lets you sleep at night',
               text:
-                'Well, there are people who are damn rich, people who are damn hot, people who are praised for their personality and relationships with other people, there are people of many virtues, people whose deeds are piercing heavens and shining like stars — and then there is you, the observer, the judge. How come it you are so hard on yourself? Well, being a human, it’s natural to have human perspectives, but look the other way, see with the eyes of the nature: you are living, isn’t that enough? Aren’t you experiencing the same way from point B to point D as all other people do? Surely things are different for everyone, but at the very core it’s all the same existing, really.',
+                'Well, there are people who are damn rich, people who are damn hot, people who are praised for their personality and relationships with other people, there are people of many virtues, people whose deeds are piercing heavens and shining like stars — and then there is you, the observer, the judge. How come it you are so hard on yourself? Well, being a human, it’s natural to have human perspectives, but look the other way, see with the eyes of the nature: you are living, isn’t that enough? Aren’t you experiencing the same way from point B to point D as all other people do? Surely things are different for everyone, but at the very core it’s all the same shit, really.',
+            },
+            {
+              title: 'On good singing',
+              text:
+                'It seems to me that no matter how mediocre the music or lyrics are, one can always make a good song if they put all their soul, emotions and energy into singing. Good music and lyrics would certainly help, but feelings is what makes the largest difference. This also seems to be true for any other medium — you can always tell if one does the thing wholeheartedly.',
             },
           ],
         },
