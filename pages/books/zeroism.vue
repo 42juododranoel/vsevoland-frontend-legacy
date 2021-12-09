@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Cover title="Zeroism" subtitle="a Book on Self" />
     <Spread
       v-for="(spread, spread_index) in contents.spreads"
       :key="spread_index"
@@ -18,6 +19,7 @@
 </template>
 
 <script>
+import Cover from '@/components/book/Cover.vue'
 import Page from '@/components/book/Page.vue'
 import Spread from '@/components/book/Spread.vue'
 import Aphorism from '@/components/custom/on-self/Aphorism.vue'
@@ -133,11 +135,50 @@ const contents = {
             {
               title: 'Stoics on illness',
               text:
-                'It is said that everything happening is a part of nature. You have a toothache and you feel bad, but why do you feel bad? Because you physically don’t like this pain, or because you don’t like the fact of that unfortune happening to you? I hope former, because the latter sounds like you think that only good things should always happen to you?',
+                'It is said that everything happening is a part of nature. You have a toothache and you feel bad, but why do you feel bad? Because you physically don’t like this pain, or because you don’t like the fact of that unfortune happening to you? I hope former, since the latter sounds like you think that only good things should always happen to you?',
             },
             {
               title: 'F.I.L.O.',
               text: 'Knowledge of self shines brighter than all — that’s what Shingo Annen said.',
+            },
+          ],
+        },
+      ],
+    },
+
+    {
+      number: '6',
+      pages: [
+        {
+          aphorisms: [
+            {
+              title: 'The greatest virtue',
+              text:
+                'Is there a greater virtue than being able to withstand any shit without losing yourself? Yep, there is. It may sound pretentious, but it truly is the greatest virtue — it’s called eternal recurrence. Go check the penultimate aphorism of the fourth section of Nietzsche’s “Gay Science”, but please, I beg you, please don’t even try to think of it in any way other than how it was written down by him. The eternal recurrence is not some kind of metaphysical theory of all things returning, it’s just a question to ask yourself to understand if you are living your life virtuously.',
+            },
+            {
+              title: 'Memento mori',
+              text:
+                'Seems like you are ready to die at any moment. What is this — insanity? Or the inner peace? Also remember: being ready to die at any moment doesn’t mean being willing to die at any moment.',
+            },
+            {
+              title: 'It’s only natural',
+              text:
+                'They say: it’s easier to control your emotions when you known that all people are equal parts of same Nature. Yep, that’s true, but what does it mean? It’s also a part of Nature to feel pissed off when they piss you off. At the end of the day just try to choose whatever you regret the least. And remember that you are a mere human, you are far from perfect. You can choose anything or  even don’t choose anything at all — that’s what humans do.',
+            },
+          ],
+        },
+        {
+          aphorisms: [
+            {
+              title: 'Even greater virtue',
+              text:
+                'It seems to me that there is even a greater virtue than eternal recurrence — it’s being able to go through your life without really questioning all the meanings and depths. The gaze of the abyss is unbearable from time to time, it’s also getting more intense as I age. I wish sometimes to not think, to not feel anything, to not even be, to at least learn to ignore some of my knowledge. Yep, philosophy, it’s you I am talking about.',
+            },
+            {
+              title: 'Maybe on Earth, maybe in the future',
+              text:
+                'Blame is truly a work of art. It widens your imagination, a lot of everyday things like time and life have no or different meaning in Blame. Killy and Cibo and Sanakan sometimes have to wait like 800 hours just to get from point A to point B, is there another story where you can find things like that?',
             },
           ],
         },
@@ -152,6 +193,7 @@ export default {
     Page,
     Spread,
     Aphorism,
+    Cover,
   },
   data() {
     return {
@@ -160,14 +202,7 @@ export default {
   },
   head() {
     return {
-      title: '',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: '',
-        },
-      ],
+      title: 'Zeroism, or, a Book on Self',
     }
   },
 }
