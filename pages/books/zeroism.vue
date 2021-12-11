@@ -22,7 +22,7 @@
 import Cover from '@/components/book/Cover.vue'
 import Page from '@/components/book/Page.vue'
 import Spread from '@/components/book/Spread.vue'
-import Aphorism from '@/components/custom/on-self/Aphorism.vue'
+import Aphorism from '@/components/custom/zeroism/Aphorism.vue'
 
 const contents = {
   spreads: [
@@ -178,7 +178,40 @@ const contents = {
             {
               title: 'Maybe on Earth, maybe in the future',
               text:
-                'Blame is truly a work of art. It widens your imagination, a lot of everyday things like time and life have no or different meaning in Blame. Killy and Cibo and Sanakan sometimes have to wait like 800 hours just to get from point A to point B, is there another story where you can find things like that?',
+                'Blame is truly a work of art. It widens your imagination, a lot of everyday things like time and life have no or different meaning in Blame. Killy and Cibo sometimes have to wait like 800 hours just to get from point A to point B, is there another story where you can find things like that?',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      number: '7',
+      pages: [
+        {
+          aphorisms: [
+            {
+              title: 'I understand',
+              text:
+                'In my life, one of the greatest sorrows comes when people say that they understand me, but I can clearly see that they don’t. It gets worse as I live. When I was a teenager and someone would give me a so called “life advice”, I would listen and follow it. After getting into philosophy I’ve started to see how little they understand about their own lives, and yet they feel like they are authorised to act like an all-knowing life teacher to me. People more often give advice not because they care about me, but because they want to see themselves giving me advice, it’s like bragging their wisdom, their enlightenment. Sometimes it feels like they are making a weapon of retribution out of me, it’s like they want me to do the things they couldn’t, which I find disgusting. But then, after getting into psychology and psychotherapy, I’ve started to see that sometimes there are people indeed who are able to share, to live this moment of desperation together with me. This true understanding is very far from what people call “I understand” or “I see”. People understand very little. Very few people are able to truly live with you when you feel miserable, but they exist.',
+            },
+            {
+              title: 'Wordswork',
+              text:
+                'Let’s say the truth is a donut hole, doesn’t it make it harder to study this truth for those, whose languages lack the word for “donut hole”, like English? Or even “donut”? Or “hole”? Language matters a lot in thinking, it can and often does confuse our cognition of truth. Someone’s wet fantasies are philosophies which can’t be understood while silently looking at bonefire. I can see Zarathustra dancing in flames, I can see stoics and epicureans and transcendentalists and bushido warriors, but is there a categorical imperative among them? Impera-what? Does this kind of thing even burn in flames?',
+            },
+          ],
+        },
+        {
+          aphorisms: [
+            {
+              title: 'It’s just my opinion',
+              text:
+                'I find it stupid that one often needs to say “It’s just my opinion”, because otherwise 90% of people will assume that the universal truth is being spoken at this moment and no fault in judgement is acceptable. It’s really stupid how we have to wrap ourselfs in devaluating words to not offend anyone. I am fine with offending people, you can‘t always be like Jesus, but sometimes it’s just a common sense to do your best to avoid being misunderstood. It seems to me that many people are intentionally willing to misundestand everything to get some drama.',
+            },
+            {
+              title: 'Special',
+              text:
+                'Each person is special simply because there is no other person like them. One does not have to be rich, beautiful or muscular to be special — just being themselves is enough. But there is a huge caveat: it’s important to understand that being special by being yourself is a very intimate thing. You can’t just walk up to people and say that they owe you something because you are special. Being special is a reson why one should love themselves even if they are a regular Joe, it’s not a reason for everyone else to love them. People generally are materialistic and shallow, very few people can love someone simply because they are special. And I don’t mean the kind of love which you can see in romance movies, I don’t mean sacrificing your life for a stranger you met a minute ago, I mean just being a decent person, treating others with respect.',
             },
           ],
         },

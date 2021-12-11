@@ -30,25 +30,23 @@ export default {
   display: grid;
   border-bottom: 1px solid #bebebe;
 
-  & .titles {
+  .titles {
     text-align: center;
-    width: 100vw;
     margin: auto 0;
     padding-bottom: 150px;
 
-    &__title {
+    .titles__title {
       font-size: 144px;
       text-transform: uppercase;
       letter-spacing: 30px;
-      margin-right: -20px;
     }
 
-    &__or {
+    .titles__or {
       font-size: 36px;
       padding-bottom: 10px;
     }
 
-    &__subtitle {
+    .titles__subtitle {
       font-size: 72px;
       font-style: italic;
     }
