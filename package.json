@@ -14,7 +14,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
     "cross-env": "^5.2.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "morgan": "^1.10.0",
     "nuxt": "^2.15.8",
     "nuxt-lazy-load": "^1.2.5",
